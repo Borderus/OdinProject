@@ -1,0 +1,39 @@
+body {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #eee;
+    font-family: sans-serif;
+  }
+
+.card {
+  border: 0px;
+  padding: 8px;
+  margin: 20px;
+  background-color: white;
+}
+
+h1 {
+  margin: 8px;
+  padding: 8px;
+  background-color: lightcyan;
+  font-size: 16px;
+}
+
+.content {
+  margin: 8px;
+  padding: 8px;
+  background-color: lightcyan;
+}
+
+.button-container {
+  margin: 8px;
+  padding: 8px;
+  background-color: lightcyan;
+  text-align: center;
+}
+
+button{
+  display: block;
+  margin: auto;
+  padding: 8px;
+}
