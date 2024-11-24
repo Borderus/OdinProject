@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Function Library Examples</title>
+        <style>
+            input {
+                font-size: 2em;
+                margin: 10px 1px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <input class="numberInput" type="text">
+        <p></p>
+    </body>
+    <script>
+        const input = document.querySelector(".numberInput")
+        const p = document.querySelector("p")
+
+        function squared(num) {
+            return num*num
+        }
+
+        function cubed(num) {
+            return num*num*num
+        }
+
+        function factorial(num) {
+            if (num < 0) return undefined;
+            if (num === 0) return 1;
+            let x = num-1;
+            while (x>1) {
+                num *= x;
+                x--;
+            }
+            return num;
+        }
+
+        function capitalise(instring) {
+            const outstring = instring.substring(0,1).toUpperCase()+instring.substring(1).toLowerCase();
+            return outstring;
+        }
+
+        console.log(capitalise("UPPERCASE"))
+        console.log(capitalise("BoTh"))
+
+        function fizzbuzz(innum) {
+            if (isNaN(innum)) {
+                console.log("Enter a number!");
+            } else {
+                let counter = 0;
+                while (counter <= innum) {
+                    let outstring = counter;
+                    if (counter%3 === 0 && counter%5 === 0) {
+                        outstring = "Fizzbuzz";
+                    } else if (counter%3 === 0) {
+                        outstring = "Fizz";
+                    } else if (counter%5 === 0) {
+                        outstring = "Buzz";
+                    }
+                    console.log(outstring);
+                    counter ++;
+                }
+            }
+        }
+
+        fizzbuzz(300);
+
+        input.addEventListener("change", () => {
+            const num=parseFloat(input.value);
+            if (isNaN(num)) {
+                p.textContent = "You need to enter a number!"
+            } else {
+                p.textContent = `${num} squared is ${squared(num)}. `
+                p.textContent += `${num} cubed is ${cubed(num)}. `
+                p.textContent += `${num} factorial is ${factorial(num)}. `
+            }
+        });
+    </script>
+</html>
