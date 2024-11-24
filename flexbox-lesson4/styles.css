@@ -1,0 +1,15 @@
+div, span{
+    border: 2px solid darkblue;
+    background-color: skyblue;
+    gap:4px;
+}
+
+.container{
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+.item{
+    flex: 1;
+}
