@@ -1,0 +1,19 @@
+.head-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.head-entry {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list-entry {
+    display: flex;
+    flex-direction: row;
+}
+
+.div1 {
+    width: 75px;
+}
